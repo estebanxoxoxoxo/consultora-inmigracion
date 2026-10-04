@@ -1,0 +1,13 @@
+{
+  "name": "web-residencias",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web de residencias en España online y Pack Bienvenida. Generador estático sin dependencias.",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -12,7 +12,7 @@ const ROUTES = {
   privacy: { es: '/privacidad/', en: '/en/privacy/' },
   cookies: { es: '/cookies/', en: '/en/cookies/' },
 };
-const RESIDENCES = ['students', 'spanish', 'eu'];
+const RESIDENCES = ['eu', 'spanish', 'students'];
 const RES_ICON = { students: 'graduation', spanish: 'heart', eu: 'globe' };
 
 /* ───────────────────────── Utilidades ───────────────────────── */
@@ -147,8 +147,8 @@ function siteHeader(ctx, page, other) {
   ).join('');
 
   const mobileLinks = [
-    ...RESIDENCES.map((k) => `<a href="${url(k)}"><span>${c.services[k].name}</span><small>${ctx.money(cfg.prices.residence)}</small></a>`),
     `<a href="${url('pack')}"><span>${n.pack}</span><small>${ctx.money(cfg.prices.pack)}</small></a>`,
+    ...RESIDENCES.map((k) => `<a href="${url(k)}"><span>${c.services[k].name}</span><small>${ctx.money(cfg.prices.residence)}</small></a>`),
     `<a href="${url('home', '#como-funciona')}"><span>${n.how}</span></a>`,
     `<a href="${cfg.platformUrl}" rel="noopener"><span>${n.file}</span>${icon('arrow-up-right')}</a>`,
   ].join('');
@@ -158,11 +158,11 @@ function siteHeader(ctx, page, other) {
     <a class="logo" href="${url('home')}" aria-label="${esc(cfg.brand.name)} · ${n.home}">${logo(ctx)}</a>
     <nav class="nav" aria-label="${c.lang === 'es' ? 'Principal' : 'Main'}">
       <ul class="nav-list">
+        <li><a class="nav-link${page === 'pack' ? ' is-current' : ''}" href="${url('pack')}">${n.pack}</a></li>
         <li class="has-drop">
           <button class="nav-link" type="button" aria-expanded="false" aria-controls="drop-res" data-drop>${n.residences}${icon('chevron', 'chev')}</button>
           <div class="dropdown" id="drop-res">${resItems}</div>
         </li>
-        <li><a class="nav-link${page === 'pack' ? ' is-current' : ''}" href="${url('pack')}">${n.pack}</a></li>
         <li><a class="nav-link" href="${url('home', '#como-funciona')}">${n.how}</a></li>
       </ul>
     </nav>
@@ -176,7 +176,6 @@ function siteHeader(ctx, page, other) {
 </header>
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
   <div class="container">
-    <p class="mobile-label">${n.residences}</p>
     <nav class="mobile-links" aria-label="${c.lang === 'es' ? 'Menú' : 'Menu'}">${mobileLinks}</nav>
     <div class="mobile-foot">
       <a class="btn btn-accent btn-lg btn-block" href="${url('start')}">${n.start}${icon('arrow')}</a>
@@ -205,8 +204,8 @@ function footer(ctx) {
       <div class="footer-col">
         <p class="footer-h">${f.services}</p>
         <ul>
-          ${RESIDENCES.map((k) => `<li><a href="${url(k)}">${c.services[k].name}</a></li>`).join('')}
           <li><a href="${url('pack')}">${c.services.pack.name}</a></li>
+          ${RESIDENCES.map((k) => `<li><a href="${url(k)}">${c.services[k].name}</a></li>`).join('')}
         </ul>
       </div>
       <div class="footer-col">
@@ -269,29 +268,46 @@ function sectionHead(ctx, { eb, title, lead, center = false, light = false }) {
   </div>`;
 }
 
-function faqBlock(ctx, items, { title } = {}) {
-  return `<section class="section faq" aria-labelledby="faq-title">
-  <div class="container narrow">
-    <div class="section-head center" data-reveal><h2 class="display-l" id="faq-title">${title || ctx.c.ui.faqTitle}</h2></div>
-    <div class="accordion" data-reveal>
+// La FAQ admite dos formatos: array plano de {q,a} o array de grupos {label, items:[{q,a}]}.
+const isGroupedFaq = (items) => Array.isArray(items) && items.length > 0 && Array.isArray(items[0].items);
+
+// ns: '' en FAQ plana (ids faq-0, faq-b-0) o '<g>-' en agrupada (ids faq-0-1, faq-b-0-1).
+function faqAccordion(ctx, items, ns = '') {
+  return `<div class="accordion" data-reveal>
       ${items
         .map(
           (it, i) => `<div class="acc-item">
-        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-${i}" id="faq-b-${i}">${ctx.t(it.q)}<span class="acc-plus" aria-hidden="true"></span></button></h3>
-        <div class="acc-panel" id="faq-${i}" role="region" aria-labelledby="faq-b-${i}"><div><p>${ctx.t(it.a)}</p></div></div>
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-${ns}${i}" id="faq-b-${ns}${i}">${ctx.t(it.q)}<span class="acc-plus" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-${ns}${i}" role="region" aria-labelledby="faq-b-${ns}${i}"><div><p>${ctx.t(it.a)}</p></div></div>
       </div>`
         )
         .join('')}
-    </div>
+    </div>`;
+}
+
+function faqBlock(ctx, items, { title } = {}) {
+  const inner = isGroupedFaq(items)
+    ? `<div class="faq-groups">
+    ${items
+      .map((grp, g) => `<h3 class="faq-group-label" data-reveal>${ctx.t(grp.label)}</h3>
+    ${faqAccordion(ctx, grp.items, `${g}-`)}`)
+      .join('\n    ')}
+    </div>`
+    : faqAccordion(ctx, items);
+  return `<section class="section faq" aria-labelledby="faq-title">
+  <div class="container narrow">
+    <div class="section-head center" data-reveal><h2 class="display-l" id="faq-title">${title || ctx.c.ui.faqTitle}</h2></div>
+    ${inner}
   </div>
 </section>`;
 }
 
 function faqSchema(ctx, items) {
+  const flat = isGroupedFaq(items) ? items.flatMap((grp) => grp.items) : items;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: items.map((it) => ({ '@type': 'Question', name: ctx.t(it.q), acceptedAnswer: { '@type': 'Answer', text: ctx.t(it.a) } })),
+    mainEntity: flat.map((it) => ({ '@type': 'Question', name: ctx.t(it.q), acceptedAnswer: { '@type': 'Answer', text: ctx.t(it.a) } })),
   };
 }
 
@@ -404,7 +420,7 @@ function home(ctx) {
     </a>`;
   }).join('');
 
-  const residences = `<section class="section" id="servicios">
+  const residences = `<section class="section" id="residencias">
   <div class="container">
     ${sectionHead(ctx, { eb: h.residences.eyebrow, title: h.residences.title, lead: h.residences.lead })}
     <div class="res-grid">${cards}</div>
@@ -413,14 +429,14 @@ function home(ctx) {
 
   const how = `<section class="section section-tint" id="como-funciona">
   <div class="container">
-    ${sectionHead(ctx, { eb: h.how.eyebrow, title: h.how.title })}
+    ${sectionHead(ctx, { eb: h.how.eyebrow, title: h.how.title, lead: h.how.lead })}
     <ol class="steps">
       ${h.how.steps.map((s, i) => `<li class="step" data-reveal style="--d:${i * 0.1}s"><span class="step-num">${String(i + 1).padStart(2, '0')}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('')}
     </ol>
   </div>
 </section>`;
 
-  const pack = `<section class="pack-hero">
+  const pack = `<section class="pack-hero" id="servicios">
   <div class="pack-hero-media">${img(ctx, 'homePack', h.pack.alt, { sizes: '(min-width: 1000px) 50vw, 100vw' })}</div>
   <div class="pack-hero-body">
     ${eyebrow(h.pack.eyebrow, 'eyebrow-light')}
@@ -431,6 +447,7 @@ function home(ctx) {
     <ul class="icon-grid" data-reveal>
       ${h.pack.items.map((it) => `<li>${icon(it.icon)}<span>${it.label}</span></li>`).join('')}
     </ul>
+    <p class="footnote" data-reveal>${h.pack.note}</p>
     <a class="btn btn-accent btn-lg" href="${url('pack')}" data-reveal>${h.pack.cta}${icon('arrow')}</a>
   </div>
 </section>`;
@@ -445,7 +462,7 @@ function home(ctx) {
           return `<div class="stat" data-reveal style="--d:${i * 0.08}s">
           <p class="stat-num"><span data-count="${v}" data-from="${s.from ?? 0}" data-prefix="${s.prefix || ''}" data-suffix="${esc(s.suffix || '')}">${s.prefix || ''}${v}${s.suffix || ''}</span></p>
           <p class="stat-label">${s.label}</p>
-          <p class="stat-text">${s.text}</p>
+          ${s.text ? `<p class="stat-text">${s.text}</p>` : ''}
         </div>`;
         })
         .join('')}
@@ -467,39 +484,32 @@ function home(ctx) {
 </section>`;
 
   const testimonials = cfg.showPlaceholderTestimonials
-    ? `<section class="section testimonials">
-  <div class="container">
-    <div class="testi-head">
-      ${sectionHead(ctx, { eb: h.testimonials.eyebrow, title: h.testimonials.title })}
-      <div class="carousel-nav" data-reveal>
-        <button class="round-btn" type="button" data-carousel-prev aria-label="${ctx.lang === 'es' ? 'Anterior' : 'Previous'}">${icon('arrow-left')}</button>
-        <button class="round-btn" type="button" data-carousel-next aria-label="${ctx.lang === 'es' ? 'Siguiente' : 'Next'}">${icon('arrow')}</button>
-      </div>
-    </div>
-  </div>
-  <div class="carousel" data-carousel tabindex="0" aria-roledescription="carousel" aria-label="${stripRich(h.testimonials.title)}">
-    ${h.testimonials.items
-      .map(
-        (it) => `<figure class="testi">
-      <span class="pill pill-soft testi-badge">${c.ui.placeholderBadge}</span>
+    ? (() => {
+        const cards = h.testimonials.items
+          .map(
+            (it) => `<figure class="testi">
       <blockquote>“${it.quote}”</blockquote>
-      <figcaption>
-        ${img(ctx, it.avatar, '', { cls: 'testi-av', sizes: '64px', widths: [128], ratio: [64, 64] })}
-        <span><strong>${it.name}</strong><small>${it.country} · ${it.service}</small></span>
-      </figcaption>
+      <figcaption><strong>${it.name}</strong><small>${it.country} · ${it.service}</small></figcaption>
     </figure>`
-      )
-      .join('')}
+          )
+          .join('');
+        return `<section class="section testimonials">
+  <div class="container">
+    ${sectionHead(ctx, { eb: h.testimonials.eyebrow, title: h.testimonials.title })}
   </div>
-</section>`
+  <div class="marquee" data-reveal>
+    <div class="marquee-track">${cards}<div class="marquee-dup" aria-hidden="true">${cards}</div></div>
+  </div>
+</section>`;
+      })()
     : '';
 
   const body = [
     hero,
     statement(ctx, h.statement.line1, h.statement.line2),
+    pack,
     residences,
     how,
-    pack,
     stats,
     platform,
     testimonials,
@@ -709,6 +719,7 @@ function pack(ctx) {
         )
         .join('')}
     </ol>
+    <p class="footnote footnote-center" data-reveal>${p.stepsNote}</p>
   </div>
 </section>`;
 

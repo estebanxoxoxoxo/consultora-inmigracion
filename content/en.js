@@ -44,7 +44,7 @@ module.exports = {
     whatsappMsg: 'Hi, I would like some information about your services.',
     placeholderBadge: 'Sample',
     footer: {
-      blurb: 'We handle your Spanish residence permit 100% online and help you settle in when you arrive. From Madrid.',
+      blurb: 'We help you settle in when you arrive in Madrid and handle your residence permit 100% online.',
       services: 'Services',
       company: 'Contact',
       legal: 'Legal',
@@ -83,24 +83,24 @@ module.exports = {
   },
 
   services: {
-    students: { name: 'Student residence', short: 'Studies', line: 'Stay and study in Spain.' },
-    spanish: { name: 'Family of a Spanish citizen', short: 'Family of a Spaniard', line: 'Live in Spain with your Spanish family.' },
-    eu: { name: 'Family of an EU citizen', short: 'Family of an EU citizen', line: 'Live in Spain with your European family member.' },
+    students: { name: 'Student residence', short: 'Studies', line: 'Stay and study in Madrid.' },
+    spanish: { name: 'Family of a Spanish citizen', short: 'Family of a Spaniard', line: 'Live in Madrid with your Spanish family.' },
+    eu: { name: 'Family of an EU citizen', short: 'Family of an EU citizen', line: 'Live in Madrid with your European family member.' },
     pack: { name: 'Welcome Pack', short: 'Welcome Pack', line: 'Land with everything sorted.' },
   },
 
   home: {
     seo: {
-      title: '{brand} · Spanish residence permits online and help settling in with your family',
-      description: 'We handle your student residence, family-of-a-Spaniard permit or EU family card 100% online from Madrid. And we help you settle in when you arrive in Spain.',
+      title: '{brand} · Help settling in Madrid with your family and residence permits online',
+      description: 'We help you settle in when you arrive in Madrid: airport pick-up, registration, bank and insurance. And we handle your EU family card, family-of-a-Spaniard permit or student residence 100% online.',
     },
     hero: {
-      eyebrow: 'Spanish residence · 100% online',
-      title: 'Your new life in Spain *starts here.*',
-      lead: 'Online residence and a smooth arrival. No queues, no appointments, no stress.',
+      eyebrow: 'Arrival and residence in Madrid',
+      title: 'Your new life in Madrid *starts here.*',
+      lead: 'A smooth arrival and online residence. Fully handled, stress-free.',
       cta: 'Get started',
       cta2: 'See services',
-      alt: 'Smiling father holding his two children outdoors',
+      alt: 'Madrid’s Gran Vía at sunset, with the Metropolis building in the foreground',
     },
     statement: {
       line1: 'We do the paperwork.',
@@ -109,7 +109,7 @@ module.exports = {
     residences: {
       eyebrow: 'Residence permits',
       title: 'Choose your *path.*',
-      lead: 'One fixed price. Fully online. We stay with you until you have your card.',
+      lead: 'One fixed price. Fully online. We stay with you until you have your residence card.',
       alts: {
         students: 'Group of students laughing in a library',
         spanish: 'Two hands forming a heart at sunset',
@@ -118,11 +118,11 @@ module.exports = {
     },
     how: {
       eyebrow: 'How it works',
-      title: 'Four steps. *Zero queues.*',
+      title: 'Four *steps.*',
       steps: [
         { title: 'Tell us about your case', text: 'A 2-minute form or a WhatsApp message.' },
         { title: 'Sign from your phone', text: 'Authorise us to represent you with a digital signature.' },
-        { title: 'We file your application online', text: 'With the Immigration Office, on your behalf. No appointments.' },
+        { title: 'We handle everything on your behalf', text: 'Every filing, every appointment requested, with whoever it takes.' },
         { title: 'Track it all on our platform', text: 'Every step, in real time.' },
       ],
     },
@@ -135,9 +135,10 @@ module.exports = {
         { icon: 'sim', label: 'SIM with data' },
         { icon: 'home', label: 'Town hall registration' },
         { icon: 'bank', label: 'Bank account' },
-        { icon: 'shield', label: 'Health insurance' },
-        { icon: 'wifi', label: 'Internet and mobile' },
+        { icon: 'shield', label: 'Health insurance*' },
+        { icon: 'wifi', label: 'Internet and mobile*' },
       ],
+      note: '* Management included. You pay the provider directly for the service itself.',
       cta: 'Discover the Pack',
       alt: 'Traveller relaxing in an airport terminal as a plane takes off',
     },
@@ -145,9 +146,9 @@ module.exports = {
       eyebrow: 'In numbers',
       title: 'Built so you *don’t lose a single day.*',
       items: [
-        { value: 100, suffix: '%', label: 'online', text: 'From first chat to final decision.' },
-        { value: 0, from: 99, suffix: '', label: 'queues', text: 'No impossible appointments, no waiting.' },
-        { value: '{families}', prefix: '+', suffix: '', label: 'families helped', text: 'Already living in Spain.' },
+        { value: 100, suffix: '%', label: 'of what a family arriving in Spain needs', text: '' },
+        { value: 100, suffix: '%', label: 'handled', text: 'No impossible appointments, no waiting.' },
+        { value: '{families}', prefix: '+', suffix: '', label: 'families helped', text: 'Already living in Madrid.' },
         { value: 24, suffix: ' h', label: 'response time', text: 'At most. Usually much sooner.' },
       ],
     },
@@ -166,25 +167,37 @@ module.exports = {
       eyebrow: 'Stories',
       title: 'They’re *already here.*',
       items: [
-        { name: 'Valentina R.', country: 'Colombia', service: 'Student residence', avatar: 'avatar1', quote: 'I was overwhelmed with my master’s and the deadlines. They did everything and I just signed from my phone.' },
-        { name: 'Andrés M.', country: 'Mexico', service: 'Family of a Spaniard + Pack', avatar: 'avatar2', quote: 'We arrived with two kids and within a week we had our registration, bank and doctor. I couldn’t believe it.' },
-        { name: 'Camila S.', country: 'Argentina', service: 'Family of an EU citizen', avatar: 'avatar3', quote: 'They told me I had three months and I panicked. They filed it in ten days.' },
         { name: 'Diego P.', country: 'Peru', service: 'Welcome Pack', avatar: 'avatar4', quote: 'They were waiting for us at Barajas with a sign with our surname. That’s how it all began.' },
+        { name: 'Andrés M.', country: 'Mexico', service: 'Pack + Family of a Spaniard', avatar: 'avatar2', quote: 'We arrived with two kids and within a week we had our registration, bank and doctor. I couldn’t believe it.' },
+        { name: 'Camila S.', country: 'Argentina', service: 'Family of an EU citizen', avatar: 'avatar3', quote: 'They told me I had three months and I panicked. They filed it in ten days.' },
+        { name: 'Valentina R.', country: 'Colombia', service: 'Student residence', avatar: 'avatar1', quote: 'I was overwhelmed with my master’s and the deadlines. They did everything and I just signed from my phone.' },
       ],
     },
     faq: [
-      { q: 'Do I have to go anywhere in person?', a: 'Not for the application: we file it online on your behalf. You only need to attend the fingerprint appointment to collect your card (TIE), and we guide you through it.' },
-      { q: 'How do I sign so you can represent me?', a: 'From your phone, with a digital signature. We send you a link, you review it and sign in a minute. Nothing to print.' },
-      { q: 'How long does it take?', a: 'Preparing and filing usually takes us a few days once we have your documents. After that, the decision depends on the Immigration Office. Meanwhile, you see every update on your platform.' },
-      { q: 'What if they ask for more documents?', a: 'It’s included. If the Immigration Office requests more, we let you know exactly what’s needed and reply for you.' },
-      { q: 'Can I book the residence and the Pack together?', a: 'Yes. With the Residence + Welcome Pack combo you pay {combo} instead of buying them separately.' },
-      { q: 'How do I track my application?', a: 'In “My case”, our platform. You see each status in real time, upload documents and talk to your case manager.' },
+      {
+        label: 'Welcome Pack',
+        items: [
+          { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 5 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. All per family, for {pack}, tracked on our platform.' },
+          { q: 'When should I book the Pack?', a: 'Ideally a couple of weeks before your flight, so we can arrange the pick-up and prepare appointments. If you have already arrived, we can still help.' },
+          { q: 'Can I book the Pack and the residence together?', a: 'Yes. With the Welcome Pack + Residence combo you pay {combo} instead of buying them separately.' },
+        ],
+      },
+      {
+        label: 'Residence permits',
+        items: [
+          { q: 'Do I have to go anywhere in person?', a: 'Not for the application: we file it online on your behalf. You only need to attend the fingerprint appointment to collect your card (TIE), and we guide you through it.' },
+          { q: 'How do I sign so you can represent me?', a: 'From your phone, with a digital signature. We send you a link, you review it and sign in a minute. Nothing to print.' },
+          { q: 'How long does my residence take?', a: 'Preparing and filing usually takes us a few days once we have your documents. After that, the decision depends on the Immigration Office. Meanwhile, you see every update on your platform.' },
+          { q: 'What if they ask for more documents?', a: 'It’s included. If the Immigration Office requests more, we let you know exactly what’s needed and reply for you.' },
+          { q: 'How do I track my application?', a: 'In “My case”, our platform. You see each status in real time, upload documents and talk to your case manager.' },
+        ],
+      },
     ],
     final: {
       title: 'Shall we begin?',
       lead: 'Tell us about your case. We reply within 24 hours.',
       cta: 'Tell us your case',
-      alt: 'Madrid’s Gran Vía at sunset seen from above',
+      alt: 'Typical Madrid street with colourful facades',
     },
   },
 
@@ -225,12 +238,12 @@ module.exports = {
 
   students: {
     seo: {
-      title: 'Student residence in Spain online · {price} | {brand}',
-      description: 'We process your student stay permit from within Spain, 100% online. Document review, filing with the Immigration Office and tracking. {price}.',
+      title: 'Student residence in Madrid, 100% online · {price} | {brand}',
+      description: 'Studying in Madrid? We process your student stay permit from within Spain, 100% online. Document review, filing with the Immigration Office and tracking. {price}.',
     },
     hero: {
       eyebrow: 'Student residence',
-      title: 'Study in Spain. *Stay to live it.*',
+      title: 'Study in Madrid. *Stay to live it.*',
       lead: 'Turn your stay into a student residence permit without leaving Spain.',
       alt: 'Graduates throwing their caps into the sky',
     },
@@ -344,7 +357,7 @@ module.exports = {
     },
     hero: {
       eyebrow: 'Family of an EU citizen',
-      title: 'Your family is European. *Spain is your home.*',
+      title: 'Your family is European. *Madrid is your home.*',
       lead: 'Your EU family member residence card, with no queues.',
       alt: 'Family walking hand in hand along the shore',
     },
@@ -399,7 +412,7 @@ module.exports = {
 
   pack: {
     seo: {
-      title: 'Welcome Pack · Help moving to Spain with your family · {pack} | {brand}',
+      title: 'Welcome Pack · Help moving to Madrid with your family · {pack} | {brand}',
       description: 'Pick-up at Barajas, SIM, town hall registration, bank account, health insurance and internet. Everything sorted for your family when you arrive in Madrid for {pack}.',
     },
     hero: {
@@ -418,10 +431,11 @@ module.exports = {
       { icon: 'sim', img: 'stepSim', title: 'Starter SIM', text: 'Mobile data from minute one.', alt: 'Mobile phone on a white sheet' },
       { icon: 'home', img: 'stepPadron', title: 'Town hall registration', text: 'Your whole household registered.', alt: 'Aerial view of Madrid buildings' },
       { icon: 'bank', img: 'stepBank', title: 'Bank account', text: 'An account for every adult.', alt: 'Two people shaking hands in an office' },
-      { icon: 'shield', img: 'stepInsurance', title: 'Private health insurance', text: 'Cover for your whole family.', alt: 'Stethoscope beside a laptop' },
-      { icon: 'wifi', img: 'stepInternet', title: 'Internet and mobile', text: 'Your home connected, once your account is open.', alt: 'Bright, tidy bedroom' },
+      { icon: 'shield', img: 'stepInsurance', title: 'Private health insurance*', text: 'Cover for your whole family.', alt: 'Stethoscope beside a laptop' },
+      { icon: 'wifi', img: 'stepInternet', title: 'Internet and mobile*', text: 'Your home connected, once your account is open.', alt: 'Bright, tidy bedroom' },
       { icon: 'phone', img: null, title: 'Tracking on our platform', text: 'Every step, in sight.' },
     ],
+    stepsNote: '* Management included. You pay the provider directly for the service itself.',
     pricing: {
       title: 'One price. *The whole family.*',
       name: 'Welcome Pack',
@@ -431,17 +445,17 @@ module.exports = {
         '1 SIM with data',
         'Town hall registration for the whole household',
         'Bank account for every adult',
-        'Private health insurance for the whole family',
-        'Internet and mobile set-up',
+        'Private health insurance for the whole family*',
+        'Internet and mobile set-up*',
         'Tracking on our platform',
       ],
-      note: 'Includes handling each service. Insurance premiums and internet and mobile fees are paid directly to the provider.',
+      note: '* Management included. You pay the provider directly for the service itself.',
       cta: 'I want the Pack',
     },
     combo: {
       eyebrow: 'Combo',
-      title: 'Residence + Welcome Pack',
-      text: 'Your residence and your arrival, handled by the same team.',
+      title: 'Welcome Pack + Residence',
+      text: 'Your arrival and your residence, handled by the same team.',
       save: 'You save {save}',
       cta: 'I want the combo',
     },
@@ -453,17 +467,17 @@ module.exports = {
       { q: 'Can I book it without the residence?', a: 'Yes. The Pack works on its own, although the combo is better value.' },
     ],
     final: {
-      title: 'Your first day in Spain, *stress-free.*',
+      title: 'Your first day in Madrid, *stress-free.*',
       lead: 'Tell us when you arrive and how many of you there are.',
       cta: 'I want the Pack',
-      alt: 'Madrid’s Gran Vía at sunset',
+      alt: 'Typical Madrid street with colourful facades',
     },
   },
 
   start: {
     seo: {
       title: 'Get started · Tell us your case | {brand}',
-      description: 'Tell us about your case in 2 minutes and we’ll reply within 24 hours. Spanish residence online and a Welcome Pack for your arrival.',
+      description: 'Tell us about your case in 2 minutes and we’ll reply within 24 hours. A Welcome Pack for your arrival in Madrid and your Spanish residence permit, online.',
     },
     aside: {
       title: 'Two minutes. *And we’re off.*',
@@ -482,11 +496,11 @@ module.exports = {
     q1: {
       title: 'What do you need?',
       options: [
-        { value: 'students', label: 'Student residence', icon: 'graduation' },
-        { value: 'spanish', label: 'Family of a Spaniard', icon: 'heart' },
-        { value: 'eu', label: 'Family of an EU citizen', icon: 'globe' },
         { value: 'pack', label: 'Welcome Pack', icon: 'plane' },
-        { value: 'combo', label: 'Residence + Pack', icon: 'sparkle' },
+        { value: 'combo', label: 'Pack + Residence', icon: 'sparkle' },
+        { value: 'eu', label: 'Family of an EU citizen', icon: 'globe' },
+        { value: 'spanish', label: 'Family of a Spaniard', icon: 'heart' },
+        { value: 'students', label: 'Student residence', icon: 'graduation' },
       ],
     },
     q2: {

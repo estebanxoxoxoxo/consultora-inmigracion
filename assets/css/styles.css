@@ -760,3 +760,23 @@ body[data-page="start"] .wa-fab { display: none; }
 .free-call .icon { width: 20px; height: 20px; color: #F2B48A; }
 .res-free { display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255, 255, 255, .9) !important; }
 .res-free .icon { width: 18px; height: 18px; color: #F2B48A; }
+
+/* FAQ agrupada (home) */
+.faq-group-label { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 56px 0 16px; }
+.faq-group-label:first-child { margin-top: 0; }
+
+/* Testimonios: cinta con desplazamiento automático */
+.marquee { overflow: hidden; padding: 8px 0 24px; }
+.marquee-track { display: flex; gap: 20px; width: max-content; animation: marquee 45s linear infinite; }
+.marquee-dup { display: contents; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-50% - 10px)); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee-track { animation: none; }
+}
+
+/* Nota al pie de los asteriscos (gestión incluida, costo al proveedor) */
+.footnote { font-size: 13px; line-height: 1.5; color: var(--muted); max-width: 46em; }
+.pack-hero-body .footnote { color: var(--on-dark-2); margin: -26px 0 36px; }
+.footnote-center { text-align: center; margin: 32px auto 0; }

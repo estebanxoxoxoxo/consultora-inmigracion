@@ -5,12 +5,17 @@ const path = require('path');
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'dist');
 
-// Recarga limpia de módulos (útil con `npm run dev`)
-for (const k of Object.keys(require.cache)) if (!k.includes('node_modules')) delete require.cache[k];
-
-const cfg = require('./site.config');
-const R = require('./src/render');
-const langs = { es: require('./content/es'), en: require('./content/en') };
+// Recarga limpia de módulos en cada build (útil con `npm run dev`)
+function loadModules() {
+  for (const k of Object.keys(require.cache)) {
+    if (!k.includes('node_modules') && k !== __filename && !k.endsWith('serve.js')) delete require.cache[k];
+  }
+  return {
+    cfg: require('./site.config'),
+    R: require('./src/render'),
+    langs: { es: require('./content/es'), en: require('./content/en') },
+  };
+}
 
 function write(route, html) {
   const file = path.join(OUT, route, 'index.html');
@@ -28,6 +33,7 @@ function copyDir(src, dst) {
 }
 
 function build() {
+  const { cfg, R, langs } = loadModules();
   fs.rmSync(OUT, { recursive: true, force: true });
   copyDir(path.join(ROOT, 'assets'), path.join(OUT, 'assets'));
 

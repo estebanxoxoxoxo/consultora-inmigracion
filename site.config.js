@@ -57,7 +57,7 @@ module.exports = {
 
   // Cifras de la home. [X] familias acompañadas → placeholder
   stats: {
-    families: 500,
+    families: 120,
   },
 
   // Endpoint para recibir formularios (p. ej. Formspree, Make, Zapier, tu backend).
@@ -77,14 +77,14 @@ module.exports = {
    * Recomendado: sustituirlas por fotos propias o con licencia antes de lanzar.
    */
   images: {
-    homeHero: '1609220136736-443140cffec6',
+    homeHero: '1570135460231-4407ce9488b5',
     statement: '1543783207-ec64e4d95325',
     cardStudents: '1523240795612-9a054b0db644',
     cardSpanish: '1516589178581-6cd7833ae3b2',
     cardEu: '1511895426328-dc8714191300',
     packHero: '1517400508447-f8dd518b86db',
     homePack: '1530521954074-e64f6810b32d',
-    finalCta: '1539037116277-4db20889f2d4',
+    finalCta: '1646039319329-ad6ef058cca5',
     studentsHero: '1541339907198-e08756dedf3f',
     studentsAlt: '1522202176988-66273c2fd55f',
     spanishHero: '1494774157365-9e04c6720e47',

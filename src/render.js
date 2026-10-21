@@ -441,7 +441,7 @@ function home(ctx) {
   <div class="pack-hero-body">
     ${eyebrow(h.pack.eyebrow, 'eyebrow-light')}
     <h2 class="display-l" data-reveal>${rich(h.pack.title)}</h2>
-    <p class="price-xl" data-reveal><span>${money(cfg.prices.pack)}</span></p>
+    <p class="price-xl" data-reveal><span>${money(cfg.prices.packSolo)}</span></p>
     <p class="lead lead-light" data-reveal>${t(h.pack.lead)}</p>
     <p class="free-call" data-reveal>${icon('calendar')}${c.ui.freeCall}</p>
     <ul class="icon-grid" data-reveal>
@@ -693,9 +693,9 @@ function pack(ctx) {
     <span class="pill pill-glass hero-in">${icon('plane')}${p.hero.eyebrow}</span>
     <h1 class="display-xxl hero-in" style="--d:.08s">${rich(p.hero.title)}</h1>
     <div class="hero-price hero-in" style="--d:.16s">
-      <p class="price-xl"><span>${money(cfg.prices.pack)}</span></p>
-      <p class="price-note">${c.ui.perGroup}</p>
-      <p class="price-note">${t(c.ui.soloNote)}</p>
+      <p class="price-xl"><span>${money(cfg.prices.packSolo)}</span></p>
+      <p class="price-note">${c.ui.perPerson}</p>
+      <p class="price-note">${t(c.ui.groupNote)}</p>
     </div>
     <p class="free-call hero-in" style="--d:.2s">${icon('calendar')}${c.ui.freeCall}</p>
     <div class="btn-row hero-in" style="--d:.24s"><a class="btn btn-accent btn-xl" href="${startHref}">${p.hero.cta}${icon('arrow')}</a></div>
@@ -730,8 +730,8 @@ function pack(ctx) {
     <div class="pricing" data-reveal>
       <div class="pricing-head">
         <p class="pricing-name">${p.pricing.name}</p>
-        <p class="pricing-price"><span>${money(cfg.prices.pack)}</span><small>${c.ui.perGroup}</small></p>
-        <p class="muted small">${t(c.ui.soloNote)}</p>
+        <p class="pricing-price"><span>${money(cfg.prices.packSolo)}</span><small>${c.ui.perPerson}</small></p>
+        <p class="muted small">${t(c.ui.groupNote)}</p>
       </div>
       <ul class="pricing-list">${p.pricing.items.map((it) => `<li><span class="check-dot">${icon('check')}</span>${it}</li>`).join('')}</ul>
       <a class="btn btn-accent btn-lg btn-block" href="${startHref}">${p.pricing.cta}${icon('arrow')}</a>
@@ -771,7 +771,7 @@ function pack(ctx) {
     page: 'pack',
     seo: p.seo,
     body,
-    schema: [serviceSchema(ctx, c.services.pack.name, cfg.prices.pack, 'pack', t(p.seo.description)), faqSchema(ctx, p.faq)],
+    schema: [serviceSchema(ctx, c.services.pack.name, cfg.prices.packSolo, 'pack', t(p.seo.description)), faqSchema(ctx, p.faq)],
   });
 }
 

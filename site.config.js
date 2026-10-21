@@ -25,8 +25,8 @@ module.exports = {
   // Precios en euros (números). El ahorro del combo se calcula solo.
   prices: {
     residence: 299,
-    pack: 399, // Pack Bienvenida por grupo
-    packSolo: 349, // Pack Bienvenida si viaja una sola persona
+    pack: 399, // Pack Bienvenida: tarifa plana por grupo de hasta 4
+    packSolo: 349, // Pack Bienvenida por persona (tarifa principal)
     combo: 649, // [PRECIO COMBO] — placeholder
   },
 

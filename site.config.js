@@ -27,6 +27,7 @@ module.exports = {
     residence: 299,
     pack: 399, // Pack Bienvenida: tarifa plana por grupo de hasta 4
     packSolo: 349, // Pack Bienvenida por persona (tarifa principal)
+    packExtra: 50, // Por persona adicional a partir de la quinta
     combo: 649, // [PRECIO COMBO] — placeholder
   },
 

@@ -28,6 +28,7 @@ function createCtx(cfg, c) {
     price: money(cfg.prices.residence),
     pack: money(cfg.prices.pack),
     packSolo: money(cfg.prices.packSolo),
+    packExtra: money(cfg.prices.packExtra),
     combo: money(cfg.prices.combo),
     save: money(cfg.prices.residence + cfg.prices.pack - cfg.prices.combo),
     iprem: money(cfg.iprem),

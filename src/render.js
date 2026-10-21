@@ -30,7 +30,10 @@ function createCtx(cfg, c) {
     packSolo: money(cfg.prices.packSolo),
     packExtra: money(cfg.prices.packExtra),
     combo: money(cfg.prices.combo),
-    save: money(cfg.prices.residence + cfg.prices.pack - cfg.prices.combo),
+    comboWas: money(cfg.prices.residence + cfg.prices.packSolo),
+    save: money(cfg.prices.residence + cfg.prices.packSolo - cfg.prices.combo),
+    resDiscount: money(cfg.prices.residenceDiscount),
+    residenceOff: money(cfg.prices.residence - cfg.prices.residenceDiscount),
     iprem: money(cfg.iprem),
     families: String(cfg.stats.families),
     email: cfg.contact.email,
@@ -747,10 +750,10 @@ function pack(ctx) {
       <div>
         ${eyebrow(p.combo.eyebrow, 'eyebrow-light')}
         <h2 class="display-m">${p.combo.title}</h2>
-        <p>${p.combo.text}</p>
+        <p>${t(p.combo.text)}</p>
       </div>
       <div class="combo-price">
-        <p class="combo-was"><s>${money(cfg.prices.residence + cfg.prices.pack)}</s></p>
+        <p class="combo-was"><s>${money(cfg.prices.residence + cfg.prices.packSolo)}</s></p>
         <p class="price-xl"><span>${money(cfg.prices.combo)}</span></p>
         <span class="pill pill-accent">${t(p.combo.save)}</span>
         <a class="btn btn-accent btn-lg" href="${url('start')}?s=combo">${p.combo.cta}${icon('arrow')}</a>

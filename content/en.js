@@ -180,7 +180,7 @@ module.exports = {
         items: [
           { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 4 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. For {packSolo} per person, or {pack} for a group of up to 4 ({packExtra} per extra person), tracked on our platform.' },
           { q: 'When should I book the Pack?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. If you have already arrived, we can still help.' },
-          { q: 'Can I book the Pack and the residence together?', a: 'Yes. With the Welcome Pack + Residence combo you pay {combo} instead of buying them separately.' },
+          { q: 'Can I book the Pack and the residence together?', a: 'Yes, and it pays off. Travelling solo, the Welcome Pack + Residence combo costs {combo} instead of {comboWas}. Coming as a group, if you book the Pack every member gets {resDiscount} off their residence: {residenceOff} instead of {price}.' },
         ],
       },
       {
@@ -456,7 +456,7 @@ module.exports = {
     combo: {
       eyebrow: 'Combo',
       title: 'Welcome Pack + Residence',
-      text: 'Your arrival and your residence, handled by the same team.',
+      text: 'Your arrival and your residence, handled by the same team. Travelling solo? The full combo is {combo}. Coming as a group? With the Pack booked, each member gets {resDiscount} off their residence: {residenceOff} instead of {price}.',
       save: 'You save {save}',
       cta: 'I want the combo',
     },

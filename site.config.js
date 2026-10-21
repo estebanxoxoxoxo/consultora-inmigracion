@@ -28,7 +28,8 @@ module.exports = {
     pack: 399, // Pack Bienvenida: tarifa plana por grupo de hasta 4
     packSolo: 349, // Pack Bienvenida por persona (tarifa principal)
     packExtra: 50, // Por persona adicional a partir de la quinta
-    combo: 649, // [PRECIO COMBO] — placeholder
+    combo: 599, // Pack + residencia para quien llega solo
+    residenceDiscount: 50, // Descuento por integrante en la residencia si el grupo contrata el Pack
   },
 
   // [IPREM VIGENTE] mensual en euros. Revísalo cada año (BOE / Presupuestos).

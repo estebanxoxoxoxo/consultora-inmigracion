@@ -186,7 +186,7 @@ module.exports = {
         items: [
           { q: '¿Qué incluye el Pack Bienvenida?', a: 'Traslado desde Barajas (hasta 4 personas), SIM con datos, empadronamiento, cuenta bancaria para cada adulto, seguro médico privado y alta de internet y móviles. Por {packSolo} por persona, o {pack} por grupo de hasta 4 ({packExtra} por persona adicional), con seguimiento en nuestra plataforma.' },
           { q: '¿Cuándo tengo que contratar el Pack?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Si ya llegaste, también podemos ayudarte.' },
-          { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí. Con el combo Pack Bienvenida + Residencia pagás {combo} en lugar de contratarlos por separado.' },
+          { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí, y conviene. Si llegás solo, el combo Pack Bienvenida + Residencia cuesta {combo} en lugar de {comboWas}. Si vienen en grupo y contratan el Pack, cada integrante tiene {resDiscount} de descuento en su residencia: paga {residenceOff} en lugar de {price}.' },
         ],
       },
       {
@@ -467,7 +467,7 @@ module.exports = {
     combo: {
       eyebrow: 'Combo',
       title: 'Pack Bienvenida + Residencia',
-      text: 'Tu llegada y tu residencia, resueltas por el mismo equipo.',
+      text: 'Tu llegada y tu residencia, resueltas por el mismo equipo. ¿Llegás solo? El combo completo queda en {combo}. ¿Vienen en grupo? Con el Pack contratado, cada integrante tiene {resDiscount} de descuento en su residencia: {residenceOff} en lugar de {price}.',
       save: 'Ahorrás {save}',
       cta: 'Quiero el combo',
     },

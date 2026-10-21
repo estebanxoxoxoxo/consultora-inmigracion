@@ -143,13 +143,12 @@ function siteHeader(ctx, page, other) {
   const resItems = RESIDENCES.map(
     (k) => `<a class="drop-item" href="${url(k)}">
       <span class="drop-icon">${icon(RES_ICON[k])}</span>
-      <span><span class="drop-title">${c.services[k].name}</span><span class="drop-line">${c.services[k].line}</span></span>
-      <span class="drop-price">${ctx.money(cfg.prices.residence)}</span></a>`
+      <span><span class="drop-title">${c.services[k].name}</span><span class="drop-line">${c.services[k].line}</span></span></a>`
   ).join('');
 
   const mobileLinks = [
-    `<a href="${url('pack')}"><span>${n.pack}</span><small>${ctx.money(cfg.prices.pack)}</small></a>`,
-    ...RESIDENCES.map((k) => `<a href="${url(k)}"><span>${c.services[k].name}</span><small>${ctx.money(cfg.prices.residence)}</small></a>`),
+    `<a href="${url('pack')}"><span>${n.pack}</span></a>`,
+    ...RESIDENCES.map((k) => `<a href="${url(k)}"><span>${c.services[k].name}</span></a>`),
     `<a href="${url('home', '#como-funciona')}"><span>${n.how}</span></a>`,
     `<a href="${cfg.platformUrl}" rel="noopener"><span>${n.file}</span>${icon('arrow-up-right')}</a>`,
   ].join('');

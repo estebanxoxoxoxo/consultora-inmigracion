@@ -443,7 +443,7 @@ function home(ctx) {
     ${eyebrow(h.pack.eyebrow, 'eyebrow-light')}
     <h2 class="display-l" data-reveal>${rich(h.pack.title)}</h2>
     <p class="price-xl" data-reveal><span>${money(cfg.prices.pack)}</span></p>
-    <p class="lead lead-light" data-reveal>${h.pack.lead}</p>
+    <p class="lead lead-light" data-reveal>${t(h.pack.lead)}</p>
     <p class="free-call" data-reveal>${icon('calendar')}${c.ui.freeCall}</p>
     <ul class="icon-grid" data-reveal>
       ${h.pack.items.map((it) => `<li>${icon(it.icon)}<span>${it.label}</span></li>`).join('')}

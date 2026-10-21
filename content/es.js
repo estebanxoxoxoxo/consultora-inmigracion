@@ -109,8 +109,8 @@ module.exports = {
       alt: 'Gran Vía de Madrid al atardecer, con el edificio Metrópolis en primer plano',
     },
     statement: {
-      line1: 'Nosotros hacemos el papeleo.',
-      line2: 'Vos disfrutás de llegar.',
+      line1: 'Vos disfrutá de llegar.',
+      line2: 'Nosotros nos ocupamos del resto.',
     },
     residences: {
       eyebrow: 'Residencias',

@@ -27,6 +27,7 @@ function createCtx(cfg, c) {
     brand: cfg.brand.name,
     price: money(cfg.prices.residence),
     pack: money(cfg.prices.pack),
+    packSolo: money(cfg.prices.packSolo),
     combo: money(cfg.prices.combo),
     save: money(cfg.prices.residence + cfg.prices.pack - cfg.prices.combo),
     iprem: money(cfg.iprem),
@@ -694,7 +695,8 @@ function pack(ctx) {
     <h1 class="display-xxl hero-in" style="--d:.08s">${rich(p.hero.title)}</h1>
     <div class="hero-price hero-in" style="--d:.16s">
       <p class="price-xl"><span>${money(cfg.prices.pack)}</span></p>
-      <p class="price-note">${c.ui.perFamily}</p>
+      <p class="price-note">${c.ui.perGroup}</p>
+      <p class="price-note">${t(c.ui.soloNote)}</p>
     </div>
     <p class="free-call hero-in" style="--d:.2s">${icon('calendar')}${c.ui.freeCall}</p>
     <div class="btn-row hero-in" style="--d:.24s"><a class="btn btn-accent btn-xl" href="${startHref}">${p.hero.cta}${icon('arrow')}</a></div>
@@ -729,7 +731,8 @@ function pack(ctx) {
     <div class="pricing" data-reveal>
       <div class="pricing-head">
         <p class="pricing-name">${p.pricing.name}</p>
-        <p class="pricing-price"><span>${money(cfg.prices.pack)}</span><small>${c.ui.perFamily}</small></p>
+        <p class="pricing-price"><span>${money(cfg.prices.pack)}</span><small>${c.ui.perGroup}</small></p>
+        <p class="muted small">${t(c.ui.soloNote)}</p>
       </div>
       <ul class="pricing-list">${p.pricing.items.map((it) => `<li><span class="check-dot">${icon('check')}</span>${it}</li>`).join('')}</ul>
       <a class="btn btn-accent btn-lg btn-block" href="${startHref}">${p.pricing.cta}${icon('arrow')}</a>

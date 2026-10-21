@@ -9,8 +9,8 @@
 module.exports = {
   // [NOMBRE DE LA MARCA] — nombre provisional, cámbialo aquí
   brand: {
-    name: 'Aterriza',
-    tagline: 'Residencias en España · Madrid',
+    name: 'Ya Aterrizamos',
+    tagline: 'Llegada y residencia en Madrid',
   },
 
   // Dominio final (para canonical, hreflang, sitemap y Open Graph). Sin barra final.

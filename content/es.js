@@ -185,7 +185,7 @@ module.exports = {
         label: 'Pack Bienvenida',
         items: [
           { q: '¿Qué incluye el Pack Bienvenida?', a: 'Traslado desde Barajas (hasta 5 personas), SIM con datos, empadronamiento, cuenta bancaria para cada adulto, seguro médico privado y alta de internet y móviles. Todo por grupo, por {pack} (si viajás solo, {packSolo}), con seguimiento en nuestra plataforma.' },
-          { q: '¿Cuándo tengo que contratar el Pack?', a: 'Idealmente, un par de semanas antes de tu vuelo, para organizar el traslado y dejar las citas preparadas. Si ya llegaste, también podemos ayudarte.' },
+          { q: '¿Cuándo tengo que contratar el Pack?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Si ya llegaste, también podemos ayudarte.' },
           { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí. Con el combo Pack Bienvenida + Residencia pagás {combo} en lugar de contratarlos por separado.' },
         ],
       },
@@ -472,7 +472,7 @@ module.exports = {
       cta: 'Quiero el combo',
     },
     faq: [
-      { q: '¿Cuándo tengo que contratarlo?', a: 'Idealmente, un par de semanas antes de tu vuelo, para organizar el traslado y tener las citas preparadas. Pero también podemos ayudarte si ya estás acá.' },
+      { q: '¿Cuándo tengo que contratarlo?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Pero también podemos ayudarte si ya estás acá.' },
       { q: '¿Y si somos más de 5 personas?', a: 'Escribinos y adaptamos el traslado. El resto del Pack cubre a todo tu núcleo familiar.' },
       { q: '¿Y si viajo solo?', a: 'También funciona. Para una persona, el Pack cuesta {packSolo} en lugar de {pack}.' },
       { q: '¿El seguro y las tarifas están incluidas?', a: 'Incluimos toda la gestión. La prima del seguro y las tarifas de internet y móvil las pagás directamente a cada proveedor, sin intermediarios.' },

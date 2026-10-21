@@ -179,7 +179,7 @@ module.exports = {
         label: 'Welcome Pack',
         items: [
           { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 5 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. All per group, for {pack} ({packSolo} if you’re travelling solo), tracked on our platform.' },
-          { q: 'When should I book the Pack?', a: 'Ideally a couple of weeks before your flight, so we can arrange the pick-up and prepare appointments. If you have already arrived, we can still help.' },
+          { q: 'When should I book the Pack?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. If you have already arrived, we can still help.' },
           { q: 'Can I book the Pack and the residence together?', a: 'Yes. With the Welcome Pack + Residence combo you pay {combo} instead of buying them separately.' },
         ],
       },
@@ -461,7 +461,7 @@ module.exports = {
       cta: 'I want the combo',
     },
     faq: [
-      { q: 'When should I book it?', a: 'Ideally a couple of weeks before your flight, so we can arrange the pick-up and prepare appointments. But we can also help if you’re already here.' },
+      { q: 'When should I book it?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. But we can also help if you’re already here.' },
       { q: 'What if we are more than 5 people?', a: 'Write to us and we’ll adapt the transfer. The rest of the Pack covers your whole household.' },
       { q: 'What if I’m travelling alone?', a: 'That works too. For one person, the Pack costs {packSolo} instead of {pack}.' },
       { q: 'Are insurance and fees included?', a: 'We include all the handling. Insurance premiums and internet and mobile fees are paid directly to each provider, with no middleman.' },

@@ -103,7 +103,7 @@ module.exports = {
     hero: {
       eyebrow: 'Llegada y residencia en Madrid',
       title: 'Tu nueva vida en Madrid *empieza acá.*',
-      lead: 'Llegada resuelta y residencia online. Totalmente gestionado, sin estrés.',
+      lead: 'Llegada resuelta y residencia. Totalmente gestionado, sin estrés.',
       cta: 'Empezar',
       cta2: 'Ver servicios',
       alt: 'Gran Vía de Madrid al atardecer, con el edificio Metrópolis en primer plano',

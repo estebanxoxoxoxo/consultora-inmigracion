@@ -97,7 +97,7 @@ module.exports = {
     hero: {
       eyebrow: 'Arrival and residence in Madrid',
       title: 'Your new life in Madrid *starts here.*',
-      lead: 'A smooth arrival and online residence. Fully handled, stress-free.',
+      lead: 'A smooth arrival and residence. Fully handled, stress-free.',
       cta: 'Get started',
       cta2: 'See services',
       alt: 'Madrid’s Gran Vía at sunset, with the Metropolis building in the foreground',

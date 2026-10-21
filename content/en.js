@@ -188,7 +188,7 @@ module.exports = {
         items: [
           { q: 'Do I have to go anywhere in person?', a: 'Not for the application: we file it online on your behalf. You only need to attend the fingerprint appointment to collect your card (TIE), and we guide you through it.' },
           { q: 'How do I sign so you can represent me?', a: 'From your phone, with a digital signature. We send you a link, you review it and sign in a minute. Nothing to print.' },
-          { q: 'How long does my residence take?', a: 'Preparing and filing usually takes us a few days once we have your documents. After that, the decision depends on the Immigration Office. Meanwhile, you see every update on your platform.' },
+          { q: 'How long does my residence take?', a: 'Preparing and filing usually takes us a few days once we have your documents. Then the Immigration Office decides: the legal deadline is 2 months for student stays and family-of-a-Spaniard permits, and 3 months for the EU family card. Meanwhile, you see every update on your platform.' },
           { q: 'What if they ask for more documents?', a: 'It’s included. If the Immigration Office requests more, we let you know exactly what’s needed and reply for you.' },
           { q: 'How do I track my application?', a: 'In “My case”, our platform. You see each status in real time, upload documents and talk to your case manager.' },
         ],

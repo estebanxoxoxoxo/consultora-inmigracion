@@ -194,7 +194,7 @@ module.exports = {
         items: [
           { q: '¿Tengo que ir en persona a algún sitio?', a: 'Para la solicitud, no: la presentamos online en tu nombre. Solo vas a tener que acudir a la cita de huellas para recoger tu tarjeta (TIE), y te guiamos en ese paso.' },
           { q: '¿Cómo firmo para que me representen?', a: 'Desde tu móvil, con firma digital. Te enviamos un enlace, lo revisás y firmás en un minuto. Sin imprimir nada.' },
-          { q: '¿Cuánto tarda mi residencia?', a: 'Preparar y presentar tu solicitud suele llevarnos pocos días desde que tenemos tus documentos. Después, la resolución depende de Extranjería. Mientras tanto, ves cada avance en tu plataforma.' },
+          { q: '¿Cuánto tarda mi residencia?', a: 'Preparar y presentar tu solicitud suele llevarnos pocos días desde que tenemos tus documentos. Después resuelve Extranjería, que tiene un plazo legal de 2 meses para la estancia por estudios y la residencia de familiar de español, y de 3 meses para la tarjeta de familiar UE. Mientras tanto, ves cada avance en tu plataforma.' },
           { q: '¿Qué pasa si piden más documentos?', a: 'Está incluido. Si Extranjería emite un requerimiento, te avisamos, te decimos exactamente qué hace falta y lo contestamos por vos.' },
           { q: '¿Cómo sigo mi trámite?', a: 'Desde “Mi expediente”, nuestra plataforma. Ves cada estado en tiempo real, subís documentos y hablás con tu gestor.' },
         ],

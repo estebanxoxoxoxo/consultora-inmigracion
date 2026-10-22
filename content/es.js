@@ -105,7 +105,7 @@ module.exports = {
     hero: {
       eyebrow: 'Llegada y primera residencia',
       title: 'Tu nueva vida en Madrid *empieza acá.*',
-      lead: 'Todo lo que necesitás desde que te mudás hasta tu primer año: <strong>llegada, trámites y residencia</strong>, gestionado sin estrés.',
+      lead: 'Todo lo que necesitás desde que te mudás hasta tu primer año: <strong>llegada, trámites y residencia</strong>.',
       cta: 'Empezar',
       cta2: 'Ver servicios',
       alt: 'Gran Vía de Madrid al atardecer, con el edificio Metrópolis en primer plano',

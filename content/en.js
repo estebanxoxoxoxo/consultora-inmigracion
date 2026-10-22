@@ -148,7 +148,7 @@ module.exports = {
       eyebrow: 'In numbers',
       title: 'Built so you *don’t lose a single day.*',
       items: [
-        { value: 100, suffix: '%', label: 'of what a family arriving in Spain needs', text: '' },
+        { value: 100, suffix: '%', label: 'of what a family needs when arriving in Madrid', text: '' },
         { value: 100, suffix: '%', label: 'handled', text: 'No impossible appointments, no waiting.' },
         { value: '{families}', prefix: '+', suffix: '', label: 'families helped', text: 'Already living in Madrid.' },
         { value: 24, suffix: ' h', label: 'response time', text: 'At most. Usually much sooner.' },

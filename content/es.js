@@ -154,7 +154,7 @@ module.exports = {
       eyebrow: 'En cifras',
       title: 'Hecho para que *no pierdas ni un día.*',
       items: [
-        { value: 100, suffix: '%', label: 'de lo que necesita una familia que llega a España', text: '' },
+        { value: 100, suffix: '%', label: 'de lo que una familia necesita cuando llega a Madrid', text: '' },
         { value: 100, suffix: '%', label: 'gestionado', text: 'Ni citas imposibles, ni esperas.' },
         { value: '{families}', prefix: '+', suffix: '', label: 'familias acompañadas', text: 'Que ya viven en Madrid.' },
         { value: 24, suffix: ' h', label: 'de respuesta', text: 'Máximo. Normalmente, mucho antes.' },

@@ -40,7 +40,8 @@ module.exports = {
     langSwitchLabel: 'Read in English',
     from: 'Desde',
     perPerson: 'por persona',
-    groupNote: '¿Vienen en grupo? {pack} por grupo de hasta 4 ({packExtra} por persona adicional).',
+    groupNote: '¿Vienen en grupo? {pack} por grupo de hasta 4.*',
+    groupExtraNote: '* {packExtra} por cada persona adicional al grupo de 4.',
     oneTime: 'pago único',
     seeMore: 'Ver detalle',
     freeCall: 'Incluye reunión informativa de 20 min gratis',
@@ -136,7 +137,7 @@ module.exports = {
     pack: {
       eyebrow: 'Pack Bienvenida',
       title: 'Aterrizá con *todo resuelto.*',
-      lead: 'Por persona, o {pack} por grupo de hasta 4 ({packExtra} por persona adicional). Desde el aeropuerto hasta tu primer día en casa.',
+      lead: 'Por persona, o {pack} por grupo de hasta 4.* Desde el aeropuerto hasta tu primer día en casa.',
       items: [
         { icon: 'car', label: 'Traslado desde el aeropuerto' },
         { icon: 'sim', label: 'SIM con datos' },
@@ -184,7 +185,7 @@ module.exports = {
       {
         label: 'Pack Bienvenida',
         items: [
-          { q: '¿Qué incluye el Pack Bienvenida?', a: 'Traslado desde Barajas (hasta 4 personas), SIM con datos, empadronamiento, cuenta bancaria para cada adulto, seguro médico privado y alta de internet y móviles. Por {packSolo} por persona, o {pack} por grupo de hasta 4 ({packExtra} por persona adicional), con seguimiento en nuestra plataforma.' },
+          { q: '¿Qué incluye el Pack Bienvenida?', a: 'Traslado desde Barajas (hasta 4 personas), SIM con datos, empadronamiento, cuenta bancaria para cada adulto, seguro médico privado y alta de internet y móviles. Por {packSolo} por persona, o {pack} por grupo de hasta 4 ({packExtra} por cada persona adicional al grupo), con seguimiento en nuestra plataforma.' },
           { q: '¿Cuándo tengo que contratar el Pack?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Si ya llegaste, también podemos ayudarte.' },
           { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí, y conviene. Si llegás solo, el combo Pack Bienvenida + Residencia cuesta {combo} en lugar de {comboWas}. Si vienen en grupo y contratan el Pack, cada integrante tiene {resDiscount} de descuento en su residencia: paga {residenceOff} en lugar de {price}.' },
         ],
@@ -473,8 +474,8 @@ module.exports = {
     },
     faq: [
       { q: '¿Cuándo tengo que contratarlo?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Pero también podemos ayudarte si ya estás acá.' },
-      { q: '¿Y si somos más de 4 personas?', a: 'Sin problema: cada persona adicional suma {packExtra}. Escribinos y adaptamos el traslado a tu grupo.' },
-      { q: '¿Cómo funciona el precio?', a: '{packSolo} por persona. Si vienen en grupo de hasta 4, les conviene la tarifa plana de {pack} por todo el grupo ({packExtra} por persona adicional).' },
+      { q: '¿Y si somos más de 4 personas?', a: 'Sin problema: cada persona adicional al grupo de 4 suma {packExtra}. Escribinos y adaptamos el traslado a tu grupo.' },
+      { q: '¿Cómo funciona el precio?', a: '{packSolo} por persona. Si vienen en grupo de hasta 4, les conviene la tarifa plana de {pack} por todo el grupo ({packExtra} por cada persona adicional al grupo).' },
       { q: '¿El seguro y las tarifas están incluidas?', a: 'Incluimos toda la gestión. La prima del seguro y las tarifas de internet y móvil las pagás directamente a cada proveedor, sin intermediarios.' },
       { q: '¿Solo en Madrid?', a: 'El traslado es desde Barajas y el Pack está pensado para instalarte en Madrid. Si vas a otra ciudad, preguntanos.' },
       { q: '¿Puedo contratarlo sin la residencia?', a: 'Sí. El Pack funciona por sí solo, aunque con el combo te sale mejor.' },

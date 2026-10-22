@@ -37,7 +37,8 @@ module.exports = {
     langSwitchLabel: 'Leer en español',
     from: 'From',
     perPerson: 'per person',
-    groupNote: 'Coming as a group? {pack} for a group of up to 4 ({packExtra} per extra person).',
+    groupNote: 'Coming as a group? {pack} for a group of up to 4.*',
+    groupExtraNote: '* {packExtra} for each person beyond the group of 4.',
     oneTime: 'one-off fee',
     seeMore: 'See details',
     freeCall: 'Includes a free 20-min information meeting',
@@ -130,7 +131,7 @@ module.exports = {
     pack: {
       eyebrow: 'Welcome Pack',
       title: 'Land with *everything sorted.*',
-      lead: 'Per person, or {pack} for a group of up to 4 ({packExtra} per extra person). From the airport to your first day at home.',
+      lead: 'Per person, or {pack} for a group of up to 4.* From the airport to your first day at home.',
       items: [
         { icon: 'car', label: 'Airport pick-up' },
         { icon: 'sim', label: 'SIM with data' },
@@ -178,7 +179,7 @@ module.exports = {
       {
         label: 'Welcome Pack',
         items: [
-          { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 4 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. For {packSolo} per person, or {pack} for a group of up to 4 ({packExtra} per extra person), tracked on our platform.' },
+          { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 4 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. For {packSolo} per person, or {pack} for a group of up to 4 ({packExtra} for each person beyond the group), tracked on our platform.' },
           { q: 'When should I book the Pack?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. If you have already arrived, we can still help.' },
           { q: 'Can I book the Pack and the residence together?', a: 'Yes, and it pays off. Travelling solo, the Welcome Pack + Residence combo costs {combo} instead of {comboWas}. Coming as a group, if you book the Pack every member gets {resDiscount} off their residence: {residenceOff} instead of {price}.' },
         ],
@@ -462,8 +463,8 @@ module.exports = {
     },
     faq: [
       { q: 'When should I book it?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. But we can also help if you’re already here.' },
-      { q: 'What if we are more than 4 people?', a: 'No problem: each extra person adds {packExtra}. Write to us and we’ll adapt the transfer to your group.' },
-      { q: 'How does the pricing work?', a: '{packSolo} per person. Groups of up to 4 get a flat {pack} for the whole group ({packExtra} per extra person).' },
+      { q: 'What if we are more than 4 people?', a: 'No problem: each person beyond the group of 4 adds {packExtra}. Write to us and we’ll adapt the transfer to your group.' },
+      { q: 'How does the pricing work?', a: '{packSolo} per person. Groups of up to 4 get a flat {pack} for the whole group ({packExtra} for each person beyond the group of 4).' },
       { q: 'Are insurance and fees included?', a: 'We include all the handling. Insurance premiums and internet and mobile fees are paid directly to each provider, with no middleman.' },
       { q: 'Only in Madrid?', a: 'The pick-up is from Barajas and the Pack is designed for settling in Madrid. If you’re heading to another city, ask us.' },
       { q: 'Can I book it without the residence?', a: 'Yes. The Pack works on its own, although the combo is better value.' },

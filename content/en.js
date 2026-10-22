@@ -149,7 +149,7 @@ module.exports = {
       title: 'Built so you *don’t lose a single day.*',
       items: [
         { value: 100, suffix: '%', label: 'of what a family needs when arriving in Madrid', text: '' },
-        { value: 100, suffix: '%', label: 'handled', text: 'No impossible appointments, no waiting.' },
+        { value: 100, suffix: '%', label: 'handled', text: 'Impossible appointments are our problem.' },
         { value: '{families}', prefix: '+', suffix: '', label: 'families helped', text: 'Already living in Madrid.' },
         { value: 24, suffix: ' h', label: 'response time', text: 'At most. Usually much sooner.' },
       ],

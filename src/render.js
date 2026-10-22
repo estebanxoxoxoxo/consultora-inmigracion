@@ -447,11 +447,11 @@ function home(ctx) {
     <h2 class="display-l" data-reveal>${rich(h.pack.title)}</h2>
     <p class="price-xl" data-reveal><span>${money(cfg.prices.packSolo)}</span></p>
     <p class="lead lead-light" data-reveal>${t(h.pack.lead)}</p>
+    <p class="footnote" data-reveal>${t(c.ui.groupExtraNote)}</p>
     <p class="free-call" data-reveal>${icon('calendar')}${c.ui.freeCall}</p>
     <ul class="icon-grid" data-reveal>
       ${h.pack.items.map((it) => `<li>${icon(it.icon)}<span>${it.label}</span></li>`).join('')}
     </ul>
-    <p class="footnote" data-reveal>${t(c.ui.groupExtraNote)}</p>
     <p class="footnote" data-reveal>${h.pack.note}</p>
     <a class="btn btn-accent btn-lg" href="${url('pack')}" data-reveal>${h.pack.cta}${icon('arrow')}</a>
   </div>
@@ -738,10 +738,10 @@ function pack(ctx) {
         <p class="pricing-name">${p.pricing.name}</p>
         <p class="pricing-price"><span>${money(cfg.prices.packSolo)}</span><small>${c.ui.perPerson}</small></p>
         <p class="muted small">${t(c.ui.groupNote)}</p>
+        <p class="muted small">${t(c.ui.groupExtraNote)}</p>
       </div>
       <ul class="pricing-list">${p.pricing.items.map((it) => `<li><span class="check-dot">${icon('check')}</span>${it}</li>`).join('')}</ul>
       <a class="btn btn-accent btn-lg btn-block" href="${startHref}">${p.pricing.cta}${icon('arrow')}</a>
-      <p class="pricing-note">${t(c.ui.groupExtraNote)}</p>
       <p class="pricing-note">${p.pricing.note}</p>
     </div>
   </div>

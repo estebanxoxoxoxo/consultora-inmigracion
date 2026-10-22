@@ -236,6 +236,7 @@ body[data-header="solid"] .site-header::before, .site-header.is-scrolled::before
 .hero-price { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
 .hero-price .price-xl { margin: 0; }
 .price-note { color: var(--on-dark-2); font-size: 15px; }
+.price-footnote { color: var(--on-dark-2); font-size: 13px; line-height: 1.5; max-width: 40em; margin-top: 6px; }
 .hero-price + .btn-row { margin-top: 24px; }
 .price-xl { font-size: clamp(56px, 7vw, 96px); font-weight: 300; letter-spacing: -.04em; line-height: 1; margin: 16px 0 0; }
 

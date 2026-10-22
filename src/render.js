@@ -447,7 +447,7 @@ function home(ctx) {
     <h2 class="display-l" data-reveal>${rich(h.pack.title)}</h2>
     <p class="price-xl" data-reveal><span>${money(cfg.prices.packSolo)}</span></p>
     <p class="lead lead-light" data-reveal>${t(h.pack.lead)}</p>
-    <p class="footnote" data-reveal>${t(c.ui.groupExtraNote)}</p>
+    <p class="price-footnote" data-reveal>${t(c.ui.groupExtraNote)}</p>
     <p class="free-call" data-reveal>${icon('calendar')}${c.ui.freeCall}</p>
     <ul class="icon-grid" data-reveal>
       ${h.pack.items.map((it) => `<li>${icon(it.icon)}<span>${it.label}</span></li>`).join('')}
@@ -701,7 +701,7 @@ function pack(ctx) {
       <p class="price-xl"><span>${money(cfg.prices.packSolo)}</span></p>
       <p class="price-note">${c.ui.perPerson}</p>
       <p class="price-note">${t(c.ui.groupNote)}</p>
-      <p class="price-note small">${t(c.ui.groupExtraNote)}</p>
+      <p class="price-footnote">${t(c.ui.groupExtraNote)}</p>
     </div>
     <p class="free-call hero-in" style="--d:.2s">${icon('calendar')}${c.ui.freeCall}</p>
     <div class="btn-row hero-in" style="--d:.24s"><a class="btn btn-accent btn-xl" href="${startHref}">${p.hero.cta}${icon('arrow')}</a></div>

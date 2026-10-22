@@ -121,7 +121,7 @@ module.exports = {
       eyebrow: 'How it works',
       title: 'Four *steps.*',
       steps: [
-        { title: 'Tell us about your case', text: 'A 2-minute form or a WhatsApp message.' },
+        { title: 'Tell us about your case', text: 'Through the form, on WhatsApp right away, or in a scheduled 20-minute meeting, free.' },
         { title: 'Sign from your phone', text: 'Authorise us to represent you with a digital signature.' },
         { title: 'We handle everything on your behalf', text: 'Every filing, every appointment requested, with whoever it takes.' },
         { title: 'Track it all on our platform', text: 'Every step, in real time.' },

@@ -127,7 +127,7 @@ module.exports = {
       eyebrow: 'Cómo funciona',
       title: 'Cuatro *pasos.*',
       steps: [
-        { title: 'Nos contás tu caso', text: 'Un formulario de 2 minutos o un WhatsApp.' },
+        { title: 'Nos contás tu caso', text: 'Por formulario, por WhatsApp ahora mismo o en una reunión programada de 20 minutos, gratis.' },
         { title: 'Firmás desde tu móvil', text: 'Nos autorizás a representarte con firma digital.' },
         { title: 'Gestionamos todo en tu nombre', text: 'Cada presentación, cada cita solicitada, ante quien corresponda.' },
         { title: 'Seguís todo desde nuestra plataforma', text: 'Cada paso, en tiempo real.' },

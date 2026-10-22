@@ -37,7 +37,7 @@ module.exports = {
     langSwitchLabel: 'Leer en español',
     from: 'From',
     perPerson: 'per person',
-    groupNote: 'Coming as a group? {pack} for a group of up to 4.*',
+    groupNote: 'Coming as a group? {pack} for a group of up to 4*.',
     groupExtraNote: '* {packExtra} for each person beyond the group of 4.',
     oneTime: 'one-off fee',
     seeMore: 'See details',
@@ -131,7 +131,7 @@ module.exports = {
     pack: {
       eyebrow: 'Welcome Pack',
       title: 'Land with *everything sorted.*',
-      lead: 'Per person, or {pack} for a group of up to 4.* From the airport to your first day at home.',
+      lead: 'Per person, or {pack} for a group of up to 4*. From the airport to your first day at home.',
       items: [
         { icon: 'car', label: 'Airport pick-up' },
         { icon: 'sim', label: 'SIM with data' },

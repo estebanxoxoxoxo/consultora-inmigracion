@@ -96,9 +96,9 @@ module.exports = {
       description: 'We help you settle in when you arrive in Madrid: airport pick-up, registration, bank and insurance. And we handle your EU family card, family-of-a-Spaniard permit or student residence 100% online.',
     },
     hero: {
-      eyebrow: 'Arrival and residence in Madrid',
+      eyebrow: 'Arrival and first residence',
       title: 'Your new life in Madrid *starts here.*',
-      lead: 'A smooth arrival and residence. Fully handled, stress-free.',
+      lead: 'Absolutely everything you need from the day you move until your first year: arrival, paperwork and residence, all handled stress-free.',
       cta: 'Get started',
       cta2: 'See services',
       alt: 'Madrid’s Gran Vía at sunset, with the Metropolis building in the foreground',

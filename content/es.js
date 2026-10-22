@@ -102,9 +102,9 @@ module.exports = {
       description: 'Te ayudamos a instalarte al llegar a Madrid: traslado, padrón, banco y seguro. Y gestionamos tu tarjeta comunitaria, tu residencia de familiar de español o de estudiante 100% online.',
     },
     hero: {
-      eyebrow: 'Llegada y residencia en Madrid',
+      eyebrow: 'Llegada y primera residencia',
       title: 'Tu nueva vida en Madrid *empieza acá.*',
-      lead: 'Llegada resuelta y residencia. Totalmente gestionado, sin estrés.',
+      lead: 'Absolutamente todo lo que necesitás desde que te mudás hasta tu primer año: llegada, trámites y residencia, gestionado sin estrés.',
       cta: 'Empezar',
       cta2: 'Ver servicios',
       alt: 'Gran Vía de Madrid al atardecer, con el edificio Metrópolis en primer plano',

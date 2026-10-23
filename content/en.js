@@ -179,7 +179,7 @@ module.exports = {
       {
         label: 'Welcome Pack',
         items: [
-          { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 4 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. For {packSolo} per person, or {pack} for a group of up to 4 ({packExtra} for each person beyond the group), tracked on our platform.' },
+          { q: 'What does the Welcome Pack include?', a: 'Pick-up at Barajas (up to 4 people), a SIM with data, town hall registration, a bank account for every adult, private health insurance and internet and mobile set-up. All tracked on our platform.' },
           { q: 'When should I book the Pack?', a: 'The sooner the better: that way we can start securing your appointments and arrange the pick-up in good time. If you have already arrived, we can still help.' },
           { q: 'Can I book the Pack and the residence together?', a: 'Yes, and it pays off. Travelling solo, the Welcome Pack + Residence combo costs {combo} instead of {comboWas}. Coming as a group, if you book the Pack every member gets {resDiscount} off their residence: {residenceOff} instead of {price}.' },
         ],

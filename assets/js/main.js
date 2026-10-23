@@ -303,8 +303,8 @@
     next.addEventListener('click', go);
     back.addEventListener('click', () => i > 0 && show(i - 1, -1));
 
-    // Avance automático al elegir opción
-    $$('input[type=radio]', wiz).forEach((r) => r.addEventListener('change', () => {
+    // Avance automático al clickear una opción (también si ya estaba seleccionada)
+    $$('input[type=radio]', wiz).forEach((r) => r.addEventListener('click', () => {
       if (r.name === 'service') {
         if (r.value !== 'combo') $$('input[name="residenceType"]', wiz).forEach((x) => { x.checked = false; });
         refresh();
@@ -329,7 +329,7 @@
       if (k.length === 1 && k >= 'A' && k <= 'E') {
         const opts = $$('input[type=radio]', cur);
         const o = opts[k.charCodeAt(0) - 65];
-        if (o) { o.checked = true; o.dispatchEvent(new Event('change', { bubbles: true })); }
+        if (o) o.click();
       }
     });
 

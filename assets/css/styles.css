@@ -648,8 +648,7 @@ body[data-page="start"] .wa-fab { display: none; }
 .arrival-body .lead { margin-top: 0; }
 .arrival-body .icon-chip-lg { background: var(--accent-soft); color: #A9551F; }
 @media (min-width: 900px) {
-  .arrival-step { grid-template-columns: 1.35fr 1fr; gap: clamp(48px, 7vw, 112px); }
-  .arrival-step.is-rev .arrival-media { order: 2; }
+  .arrival-step { grid-template-columns: 1fr 1.35fr; gap: clamp(48px, 7vw, 112px); }
   .arrival-body { padding: 24px 0; }
   .arrival-num { position: static; margin-bottom: -8px; }
 }

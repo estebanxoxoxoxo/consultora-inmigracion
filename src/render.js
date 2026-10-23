@@ -714,14 +714,14 @@ function pack(ctx) {
     <ol class="arrival">
       ${p.steps
         .map(
-          (s, i) => `<li class="arrival-step${i % 2 ? ' is-rev' : ''}">
-        <div class="arrival-media" data-reveal>${s.img ? img(ctx, s.img, s.alt, { sizes: '(min-width: 900px) 50vw, 100vw', widths: [480, 800, 1200, 1600] }) : `<div class="arrival-phone">${phoneMockup(ctx)}</div>`}</div>
-        <div class="arrival-body" data-reveal style="--d:.1s">
+          (s, i) => `<li class="arrival-step">
+        <div class="arrival-body" data-reveal>
           <span class="arrival-num">${String(i + 1).padStart(2, '0')}</span>
           <span class="icon-chip icon-chip-lg">${icon(s.icon)}</span>
           <h3 class="display-m">${s.title}</h3>
           <p class="lead">${s.text}</p>
         </div>
+        <div class="arrival-media" data-reveal style="--d:.1s">${s.img ? img(ctx, s.img, s.alt, { sizes: '(min-width: 900px) 50vw, 100vw', widths: [480, 800, 1200, 1600] }) : `<div class="arrival-phone">${phoneMockup(ctx)}</div>`}</div>
       </li>`
         )
         .join('')}

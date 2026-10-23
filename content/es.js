@@ -435,8 +435,8 @@ module.exports = {
       alt: 'Viajero con mochila frente a los paneles de salidas de un aeropuerto',
     },
     statement: {
-      line1: 'Del aeropuerto a tu casa.',
-      line2: 'Del papeleo, nos ocupamos nosotros.',
+      line1: 'Vos disfrutá de llegar.',
+      line2: 'Nosotros nos ocupamos del resto.',
     },
     timelineTitle: 'Tu llegada, *paso a paso.*',
     steps: [

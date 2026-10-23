@@ -424,8 +424,8 @@ module.exports = {
       alt: 'Traveller with a backpack in front of airport departure boards',
     },
     statement: {
-      line1: 'From the airport to your home.',
-      line2: 'We take care of the paperwork.',
+      line1: 'We do the paperwork.',
+      line2: 'You enjoy arriving.',
     },
     timelineTitle: 'Your arrival, *step by step.*',
     steps: [

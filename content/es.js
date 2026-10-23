@@ -187,7 +187,7 @@ module.exports = {
         items: [
           { q: '¿Qué incluye el Pack Bienvenida?', a: 'Traslado desde Barajas (hasta 4 personas), SIM con datos, empadronamiento, cuenta bancaria para cada adulto, seguro médico privado y alta de internet y móviles. Todo con seguimiento en nuestra plataforma.' },
           { q: '¿Cuándo tengo que contratar el Pack?', a: 'Cuanto antes, mejor: así vamos consiguiendo las citas y organizamos el traslado con tiempo. Si ya llegaste, también podemos ayudarte.' },
-          { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí, y conviene. Si llegás solo, el combo Pack Bienvenida + Residencia cuesta {combo} en lugar de {comboWas}. Si vienen en grupo y contratan el Pack, cada integrante tiene {resDiscount} de descuento en su residencia: paga {residenceOff} en lugar de {price}.' },
+          { q: '¿Puedo contratar el Pack y la residencia juntos?', a: 'Sí, y conviene: tu llegada y tu residencia quedan en manos del mismo equipo. Si llegás solo, el combo Pack Bienvenida + Residencia sale con descuento; y si vienen en grupo y contratan el Pack, cada integrante tiene un descuento en su residencia.' },
         ],
       },
       {

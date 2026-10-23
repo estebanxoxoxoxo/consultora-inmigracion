@@ -518,6 +518,14 @@ module.exports = {
         { value: 'students', label: 'Estancia por estudios', icon: 'graduation' },
       ],
     },
+    q1b: {
+      title: '¿Qué residencia necesitás?',
+      options: [
+        { value: 'eu', label: 'Familiar de ciudadano UE', icon: 'globe' },
+        { value: 'spanish', label: 'Familiar de español', icon: 'heart' },
+        { value: 'students', label: 'Estancia por estudios', icon: 'graduation' },
+      ],
+    },
     q2: {
       title: '¿Ya estás en España?',
       yes: 'Sí, ya estoy acá',

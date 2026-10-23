@@ -232,14 +232,26 @@
   /* ───────── Asistente "Empezar" ───────── */
   const wiz = $('[data-wizard]');
   if (wiz) {
-    const qs = $$('.q', wiz);
-    const total = qs.length;
+    const allQs = $$('.q', wiz);
+    // El paso de tipo de residencia solo participa si el servicio elegido es el combo
+    const isCombo = () => { const r = $('input[name="service"][value="combo"]', wiz); return !!(r && r.checked); };
+    const steps = () => allQs.filter((q) => !('comboOnly' in q.dataset) || isCombo());
     const bar = $('[data-progress]');
     const label = $('[data-progress-label]');
     const back = $('[data-back]', wiz), next = $('[data-next]', wiz), submit = $('[data-submit]', wiz);
     const err = $('[data-q-error]', wiz);
     const arrival = $('[data-arrival]', wiz);
     let i = 0;
+    let cur = allQs[0];
+
+    const refresh = (list = steps()) => {
+      list.forEach((q, idx) => { const num = $('.q-num', q); if (num) num.textContent = `${idx + 1} →`; });
+      bar.style.width = ((i + 1) / list.length) * 100 + '%';
+      label.textContent = label.dataset.tpl.replace('{n}', i + 1).replace('{total}', list.length);
+      back.hidden = i === 0;
+      next.hidden = i === list.length - 1;
+      submit.hidden = i !== list.length - 1;
+    };
 
     const pre = new URLSearchParams(location.search).get('s');
     if (pre) {
@@ -248,25 +260,24 @@
     }
     const today = new Date().toISOString().slice(0, 10);
     $('#arrival', wiz).min = today;
+    refresh();
 
     const show = (n, dir = 1) => {
-      qs[i].hidden = true;
+      const list = steps();
+      cur.hidden = true;
       i = n;
-      qs[i].hidden = false;
-      qs[i].classList.toggle('is-back', dir < 0);
-      bar.style.width = ((i + 1) / total) * 100 + '%';
-      label.textContent = label.dataset.tpl.replace('{n}', i + 1).replace('{total}', total);
-      back.hidden = i === 0;
-      next.hidden = i === total - 1;
-      submit.hidden = i !== total - 1;
+      cur = list[i];
+      cur.hidden = false;
+      cur.classList.toggle('is-back', dir < 0);
+      refresh(list);
       err.textContent = '';
-      const f = qs[i].querySelector('input:checked, input:not([type=radio]):not([type=hidden]), select');
+      const f = cur.querySelector('input:checked, input:not([type=radio]):not([type=hidden]), select');
       if (f && window.matchMedia('(hover: hover)').matches) setTimeout(() => f.focus({ preventScroll: true }), 50);
       window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
     };
 
     const validate = () => {
-      const q = qs[i];
+      const q = cur;
       const radios = $$('input[type=radio]', q);
       if (radios.length && !radios.some((r) => r.checked)) return wiz.dataset.required;
       if (q.dataset.q === '2' && $('input[value="no"]', q).checked && !$('#arrival', q).value) { $('#arrival', q).focus(); return wiz.dataset.required; }
@@ -286,7 +297,7 @@
     const go = () => {
       const m = validate();
       if (m) { err.textContent = m; return; }
-      if (i < total - 1) show(i + 1, 1);
+      if (i < steps().length - 1) show(i + 1, 1);
     };
 
     next.addEventListener('click', go);
@@ -294,6 +305,10 @@
 
     // Avance automático al elegir opción
     $$('input[type=radio]', wiz).forEach((r) => r.addEventListener('change', () => {
+      if (r.name === 'service') {
+        if (r.value !== 'combo') $$('input[name="residenceType"]', wiz).forEach((x) => { x.checked = false; });
+        refresh();
+      }
       if (r.name === 'inSpain') {
         arrival.hidden = r.value !== 'no';
         if (r.value === 'no') { setTimeout(() => $('#arrival', wiz).focus(), 50); return; }
@@ -312,7 +327,7 @@
       if (e.target.matches('input:not([type=radio]), select, textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
       const k = e.key.toUpperCase();
       if (k.length === 1 && k >= 'A' && k <= 'E') {
-        const opts = $$('input[type=radio]', qs[i]);
+        const opts = $$('input[type=radio]', cur);
         const o = opts[k.charCodeAt(0) - 65];
         if (o) { o.checked = true; o.dispatchEvent(new Event('change', { bubbles: true })); }
       }
@@ -341,7 +356,9 @@
       try {
         await send({ type: 'start', ...data });
         const services = JSON.parse(wiz.dataset.services);
-        const msg = wiz.dataset.waTpl.replace('{service}', services[data.service] || data.service);
+        let svc = services[data.service] || data.service;
+        if (data.residenceType) svc += ' · ' + (services[data.residenceType] || data.residenceType);
+        const msg = wiz.dataset.waTpl.replace('{service}', svc);
         $('[data-done-wa]').href = `https://wa.me/${SITE.wa}?text=${encodeURIComponent(msg)}`;
         wiz.hidden = true;
         $('.progress').style.visibility = 'hidden';

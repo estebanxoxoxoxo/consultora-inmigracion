@@ -798,6 +798,12 @@ function start(ctx) {
       ${s.q1.options.map((o, i) => `<label class="opt"><input type="radio" name="service" value="${o.value}" required><span class="opt-key">${String.fromCharCode(65 + i)}</span>${icon(o.icon)}<span>${o.label}</span></label>`).join('')}
     </div>
   </fieldset>
+  <fieldset class="q" data-q="1b" data-combo-only hidden>
+    <legend class="q-title"><span class="q-num">2 →</span>${s.q1b.title}</legend>
+    <div class="opt-grid">
+      ${s.q1b.options.map((o, i) => `<label class="opt"><input type="radio" name="residenceType" value="${o.value}"><span class="opt-key">${String.fromCharCode(65 + i)}</span>${icon(o.icon)}<span>${o.label}</span></label>`).join('')}
+    </div>
+  </fieldset>
   <fieldset class="q" data-q="2" hidden>
     <legend class="q-title"><span class="q-num">2 →</span>${s.q2.title}</legend>
     <div class="opt-grid opt-grid-2">

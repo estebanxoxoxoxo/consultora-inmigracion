@@ -506,6 +506,14 @@ module.exports = {
         { value: 'students', label: 'Student residence', icon: 'graduation' },
       ],
     },
+    q1b: {
+      title: 'Which residence do you need?',
+      options: [
+        { value: 'eu', label: 'Family of an EU citizen', icon: 'globe' },
+        { value: 'spanish', label: 'Family of a Spaniard', icon: 'heart' },
+        { value: 'students', label: 'Student residence', icon: 'graduation' },
+      ],
+    },
     q2: {
       title: 'Are you already in Spain?',
       yes: 'Yes, I’m here',
